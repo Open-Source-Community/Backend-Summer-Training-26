@@ -37,11 +37,9 @@ Welcome aboard.
 ### Topics
 
 - TypeScript Fundamentals
-- Type Safety
 - Async Programming
 - Promises
 - async / await
-- Event Loop
 
 ---
 
@@ -51,7 +49,6 @@ Welcome aboard.
 
 ### Topics
 
-- Backend Fundamentals
 - Networking Basics
 - HTTP
 - Node.js
@@ -70,6 +67,7 @@ Welcome aboard.
 - REST APIs
 - Project Structure
 - CRUD Operations
+- Middleware
 
 ---
 
@@ -92,7 +90,6 @@ Welcome aboard.
 
 ### Topics
 
-- Middleware
 - Authentication
 - Authorization
 - JWT
