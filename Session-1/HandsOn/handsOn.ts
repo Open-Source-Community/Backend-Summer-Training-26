@@ -1,42 +1,35 @@
-// =====================================
-// 🌊 Session 1 — The Lost Trials of Atlantis
-// Solution
-// =====================================
+// ============================================================
+// Session 1 — The  First Island
+// ============================================================
 
-// =====================================
-// 🗝️ Trial 2 — The Whispering Statues
-// =====================================
+// ------------------------------------------------------------
+// Trial 1: Open the gate
+// (Project setup lives in tsconfig.json — this file is the
+// ".ts file" that proves the gate now understands TypeScript.)
+// ------------------------------------------------------------
 
-// TypeScript catches many errors before the program runs.
-// TypeScript provides better autocomplete and developer productivity.
+console.log("The gate hums... it recognizes the old tongue.");
 
+// ------------------------------------------------------------
+// Trial 2: The treasure vault
+// One variable each of string, number, boolean, and any,
+// plus an array of treasure names.
+// ------------------------------------------------------------
 
-// =====================================
-// 🗝️ Trial 3 — The Treasure Vault
-// =====================================
+const treasureName: string = "Golden Compass";
+const treasureValue: number = 4200;
+const isCursed: boolean = false;
+const mysteryItem: any = "Unknown Relic";
 
-let captainName: string = "Sindbad";
+const treasureNames: string[] = ["Golden Compass", "Pearl of Tides", "Sun Amulet"];
 
-let treasureValue: number = 5000;
+console.log("Treasure found:", treasureName, treasureValue, isCursed, mysteryItem);
+console.log("All treasures:", treasureNames);
 
-let gateOpened: boolean = true;
-
-let mysteryBox: any = "Golden Key";
-mysteryBox = 777;
-
-let treasures: string[] = [
-  "Golden Compass",
-  "Magic Sword",
-  "Ancient Scroll",
-  "Crystal Orb",
-];
-
-console.log("Treasures:", treasures);
-
-
-// =====================================
-// 🗝️ Trial 4 — The Crew Manifest
-// =====================================
+// ------------------------------------------------------------
+// Trial 3: The crew manifest
+// Interface Sailor with name, role, age.
+// ------------------------------------------------------------
 
 interface Sailor {
   name: string;
@@ -47,77 +40,45 @@ interface Sailor {
 const elsiny: Sailor = {
   name: "Elsiny",
   role: "Navigator",
-  age: 24,
+  age: 27,
 };
 
-console.log("Crew Role:", elsiny.role);
+console.log("Sailor manifest entry:", elsiny.name);
 
+// ------------------------------------------------------------
+// Trial 4: Sindbad's command
+// Typed function: takes a sailor's name, returns a blessing.
+// ------------------------------------------------------------
 
-// =====================================
-// 🗝️ Trial 5 — Sindbad's Command
-// =====================================
-
-function blessSailor(name: string): string {
-  return `May the sea protect you, ${name}!`;
+function giveBlessing(sailorName: string): string {
+  return `May the tides guide you safely, ${sailorName}.`;
 }
 
-console.log(blessSailor("Omar"));
+console.log(giveBlessing(elsiny.name));
 
+// ------------------------------------------------------------
+// Trial 5: The final seal
+// Promise that resolves or rejects, handled with
+// async/await and try/catch.
+// ------------------------------------------------------------
 
-// =====================================
-// 🗝️ Trial 6 — The Twin Currents
-// =====================================
-
-console.log("\n--- Trial 6 ---");
-console.log("Journey begins");
-
-setTimeout(() => {
-  console.log("Slow current finished");
-}, 0);
-
-// Heavy computation
-for (let i = 0; i < 1_000_000_000; i++) {}
-
-console.log("Heavy current finished");
-
-
-// =====================================
-// 🗝️ Trial 7 — The Echoes of the Deep
-// =====================================
-
-function sindbadSpeak(callback: () => void): void {
-  console.log("\nSindbad: Elsiny!");
-  callback();
-}
-
-function elsinySpeak(): void {
-  console.log("Elsiny: I'm here, Captain!");
-}
-
-sindbadSpeak(elsinySpeak);
-
-
-// =====================================
-// 🗝️ Trial 8 — The Final Seal
-// =====================================
-
-function enterAtlantis(accepted: boolean): Promise<string> {
+function checkGateSeal(crewIsWorthy: boolean): Promise<string> {
   return new Promise((resolve, reject) => {
-    if (accepted) {
-      resolve("Welcome to Atlantis!");
+    if (crewIsWorthy) {
+      resolve("The seal glows gold. The gate opens.");
     } else {
-      reject("Atlantis disappeared beneath the sea.");
+      reject("The seal stays dark. The gate remains shut.");
     }
   });
 }
 
-async function beginAdventure(): Promise<void> {
+async function passThroughGate(): Promise<void> {
   try {
-    const result = await enterAtlantis(true);
+    const result: string = await checkGateSeal(true);
     console.log(result);
   } catch (error) {
     console.log(error);
   }
 }
 
-beginAdventure();
+passThroughGate();
