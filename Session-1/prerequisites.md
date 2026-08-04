@@ -90,14 +90,19 @@ npm -v
    * **with:** leave this on **npm** (the default).
 3. As soon as you set these, a box appears below with a ready-made script.
 
+### for windows 
+![VS Code download page](../.assets/pre_s1/nodejs1.png)
+* ##### then open the file and click next until its installed
+
+### for linux
 ![VS Code download page](../.assets/pre_s1/nodejs2.png)
 
- 
-4. Click the **"Copy to clipboard"** button on the bottom-right of the code box.
+
+* ##### Click the **"Copy to clipboard"** button on the bottom-right of the code box.
 
 
  
-5. Paste the copied script into your VS Code terminal and press **Enter**. It will run several lines automatically — this installs a small tool called **nvm**, then uses it to install Node.js itself, then prints the installed `node` and `npm` versions to confirm success.
+* ##### Paste the copied script into your VS Code terminal and press **Enter**. It will run several lines automatically — this installs a small tool called **nvm**, then uses it to install Node.js itself, then prints the installed `node` and `npm` versions to confirm success.
 
 > ⚠️ **Note on OS compatibility:** Always make sure the **for** dropdown matches your actual operating system before copying the script — a script written for the wrong OS will fail or do nothing.
 
