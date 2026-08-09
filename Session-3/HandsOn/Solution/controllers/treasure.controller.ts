@@ -16,6 +16,4 @@ export const getTreasureById = (req: Request, res: Response) => {
   res.status(200).json(treasure);
 };
 
-  treasures.push(newTreasure);
-  res.status(201).json(newTreasure);
-}
+ 
