@@ -40,9 +40,7 @@ Sindbad's ship has reached the third island. This is where the crew stops just *
     - [10.2 The Hidden Journey of Every Request](#102-the-hidden-journey-of-every-request)
     - [10.3 Built-in Middleware](#103-built-in-middleware)
     - [10.4 Custom Middleware](#104-custom-middleware)
-- [🏋️ Hands-On Challenge](#️-hands-on-challenge)
-- [📌 Final Recap](#-final-recap)
-
+      
 ---
 
 ## 🧭 Quick Recap — Where We Left Off
