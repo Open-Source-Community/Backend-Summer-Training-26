@@ -1,103 +1,82 @@
 # 🌍 Sindibad's Travel Guide
 
-> **The Story:**\
-> The gate on the first island creaks open — Sindbad steps through,
-> Adel right behind him, bow slung over his shoulder as always. The
-> rest of the crew stays back to patch up the ship, so it's just the
-> two of them who reach the **second island**.
+> *The Story:*  
+> After reaching the second island, Sindbad realizes the crew keeps
+> asking the same question:
 >
-> Waiting on the shore are two locals who insist on tagging along:
-> **Marwa**, who knows every shortcut on the island (and won't stop
-> talking about it), and **Ahmed**, who immediately starts asking
-> where they're headed next, and the one after that, and the one
-> after that.
+> **"Where can we travel next?"**
 >
-> Sindbad decides enough is enough: no more guessing. He wants a
-> proper travel service for the crew — starting small, with just two
-> known stops so far: **Cairo** and **Baghdad**. He wants a simple API
-> so the crew can:
+> Instead of answering everyone one by one, Adel suggests building a
+> tiny travel service that can tell the crew about the available
+> destinations.
 >
-> -   View all available destinations.
-> -   Search for a destination using its ID.
-> -   Receive a personalized welcome message before starting their
->     journey.
+> For now, the service only knows two places:
+> **Cairo** and **Baghdad**.
+>
+> Your mission is to build the very first version of this travel API.
 
-------------------------------------------------------------------------
+---
 
-## Hands on
+# Hands On
 
-### 1️⃣ Open the Project you setup from the prerequisites
+## 1️⃣ Open the Project
 
--   Open the Folder 
--   remove any code written in the .ts file 
+- Open the project you created in the prerequisites.
 
-### 2️⃣ Create the Data
+---
 
-Create a hardcoded array called `destinations` containing:
+## 2️⃣ Create the Express Server
 
--   `id`
--   `city`
+- Create a basic **Express** server.
+- Add the following route:
 
-Include at least two destinations.
+### **GET /**
 
-### 3️⃣ Get All Destinations
+Return a welcome message for travelers.
 
-Create:
+Example response:
 
-**GET** `/destinations`
-
-Returns the complete list of destinations.
-
-### 4️⃣ Get Destination by ID
-
-Create:
-
-**GET** `/destinations/:id`
-
--   Find the destination using the route parameter.
--   If found, return it.
--   Otherwise return:
-
-``` json
-{
-  "message": "Destination not found."
-}
+```text
+Welcome to Sindibad's Travel Guide!
 ```
 
-with status code **404**.
+---
 
-### 5️⃣ Welcome a Traveler
+## 3️⃣ Create the Destinations Data
 
-Create:
+Create a hardcoded array called `destinations`.
 
-**GET** `/welcome?name=YourName`
+Each destination should contain:
 
-If the `name` query parameter exists, return:
+- `id`
+- `city`
 
-``` json
-{
-  "message": "Welcome to Sindibad, Mohamed!"
-}
-```
+Include these destinations:
 
-If the query parameter is missing, return:
+- Cairo
+- Baghdad
 
-``` json
-{
-  "message": "Please provide a name query parameter."
-}
-```
+---
 
-with status code **400**.
+## 4️⃣ Get All Destinations
 
-### 6️⃣ Test Using Postman
+Create the following endpoint:
 
-Test all endpoints:
+### **GET /destinations**
 
--   `GET /destinations`
--   `GET /destinations/1`
--   `GET /destinations/100`
--   `GET /welcome?name=Mohamed`
--   `GET /welcome`
+Return the complete list of available destinations.
 
-Verify both the returned JSON and the correct HTTP status codes.
+---
+
+## 5️⃣ Test Using Browser or Postman
+
+Run your server and test the following endpoints:
+
+- `GET /`
+- `GET /destinations`
+
+Verify that:
+
+- The welcome message is returned from `/`.
+- The destinations array is returned from `/destinations`.
+- Both endpoints respond with **HTTP Status Code 200 (OK)**.

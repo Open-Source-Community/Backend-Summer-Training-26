@@ -5,43 +5,70 @@
 > Do not change any variable or function name or header in the template or file name, doing so will affect your evaluation.
 >
 > Write your solution inside the predefined `solution.ts` template file — do not rename it, and do not change any predefined lines already inside it.
- 
 
 ---
 
 # The Scenario
 
-> Fatma and her brother Sayed own **Koshary El-Wekala**, a famous Koshary cart > in the heart of Cairo.
-> 
-> Unfortunately, they have one very annoying customer named **Abdo**, who visits > every day asking endless questions:
-> 
+> Fatma and her brother Sayed own **Koshary El-Wekala**, a famous Koshary cart
+> in the heart of Cairo.
+>
+> Unfortunately, they have one very annoying customer named **Abdo**, who visits
+> every day asking endless questions:
+>
 > - What's on today's menu?
 > - Do you have any cheap meals?
 > - What's the cheapest and most expensive bowl?
-> 
+>
 > To save time and automate their restaurant, you have been hired to build a lightweight REST API using **Express.js** and **TypeScript**.
-> 
+
 ---
 
 # The Task
 
-## 1️⃣ Initialize the Project
+## 0️⃣ Reopen the Repository You Cloned in Session 1
 
-Create a new Node.js project.
+You already cloned your personal repo from the **Sindbad-The-Backend-of-Atlantis** org while working on **Task_1** — you don't clone it again here.
 
-Configure:
+1. Open VS Code and reopen that same cloned folder (**File → Open Folder**, pick the same repo folder from Task 1).
+2. If you no longer have it locally for any reason, go to **https://github.com/Sindbad-The-Backend-of-Atlantis**, find your personal repo, click the green **Code** button, copy the **HTTPS** URL, and run `git clone <the URL>` — same as in Session 1.
+3. Inside that repo, you'll find `Task_1`, `Task_2`, `Task_3`, `Task_4`, and a `readme.md`. This document lives in **`Task_2/task2.md`**, and your code goes inside **`Task_2/solution.ts`** — that file already exists with a starter template. Open it now; you'll be filling in the section marked `// Write your solution below.`
 
-- TypeScript
-- Express.js
-- Nodemon
+> ⚠️ **Do not delete or rewrite the last two lines of `solution.ts`** (`// ⚠️ Do NOT remove or modify the export below.` and `module.exports = app;`) — the evaluator depends on that export existing exactly as-is.
 
-Install the required packages:
+---
+
+## 1️⃣ Install What You'll Need
+
+All the setup work (Node.js, npm, TypeScript, VS Code) should already be in place from the Session 1 and Session 2 prerequisite guides. From inside your cloned repo, you just need to install the packages this task depends on.
+
+If your repo doesn't already have a `package.json` at its root, create one first:
 
 ```bash
 npm init -y
-npm install express
-npm install -D typescript ts-node nodemon @types/node @types/express
 ```
+
+Then install Express itself:
+
+```bash
+npm install express
+```
+
+And the development tools — TypeScript, a TypeScript-aware runner, nodemon for auto-restart, and the type declarations for Node and Express:
+
+```bash
+npm install -D typescript tsx nodemon @types/node @types/express
+```
+
+> 💡 If you already ran similar install commands in the Session 2 prerequisites, running them again here is harmless — npm will just confirm the packages are already installed.
+
+You'll run your solution the same way you did in the prerequisites guide:
+
+```bash
+nodemon --exec tsx Task_2/solution.ts
+```
+
+(Adjust the path if you're already `cd`'d into the `Task_2` folder — in that case just `nodemon --exec tsx solution.ts`.)
 
 ---
 
@@ -165,6 +192,18 @@ Verify:
 
 ---
 
+## 9️⃣ Commit and Push Your Solution
+
+Once your endpoints work and you've tested them in Postman, save your work back to your own repository:
+
+```bash
+git add Task_2/solution.ts
+git commit -m "Solve Task 2: Koshary El-Wekala API"
+git push
+```
+
+---
+
 # 💡 Hints
 
 - Use `filter()` to retrieve available or cheap bowls.
@@ -184,11 +223,14 @@ Verify:
 - Port **3000** already in use.
 - Implicit `any` errors.
 - Missing imports or exports.
+- Renaming `solution.ts`, or editing the predefined header/export lines inside it.
+- Cloning the wrong repository, or a classmate's repository instead of your own.
 
 ---
 
 # ✅ Expected Output / Acceptance Criteria
 
+- [ ] Working inside your own repo from the **Sindbad-The-Backend-of-Atlantis** org (same one cloned in Session 1).
 - [ ] Project initialized with **Node.js**, **TypeScript**, and **Express**.
 - [ ] Server runs successfully on **port 3000**.
 - [ ] Nodemon reloads automatically.
@@ -199,3 +241,5 @@ Verify:
 - [ ] `GET /stats` returns correct statistics.
 - [ ] All endpoints tested successfully using **Postman**.
 - [ ] The project compiles without any TypeScript errors.
+- [ ] `solution.ts`'s predefined lines (including the `module.exports = app;` line) are untouched.
+- [ ] Solution committed and pushed to your repository.
