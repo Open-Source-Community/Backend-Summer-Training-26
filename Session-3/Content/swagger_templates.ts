@@ -1,4 +1,4 @@
-swagger options: 
+//swagger options: 
 
 const options = {
     definition: {
@@ -16,7 +16,8 @@ const options = {
 }
 
 
-SCHEMA:
+//SCHEMA:
+
 /**
  * @swagger
  * components:
@@ -59,7 +60,7 @@ SCHEMA:
  *         att7: []
  */
 
-TAGS:
+// TAGS:
 
 /**
  * @swagger
@@ -68,7 +69,8 @@ TAGS:
  *   description: []
  */
 
-routes template:
+
+// routes template:
 
 /**
  * @swagger
@@ -104,7 +106,8 @@ routes template:
 
 
 
-response template for returning an array:
+// response template for returning an array:
+    
  *     responses:
  *       200:
  *         description: []
