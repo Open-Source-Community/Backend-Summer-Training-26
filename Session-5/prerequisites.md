@@ -36,7 +36,7 @@ By the end of this prerequisite guide, you should have:
 
 # Step 0: Download the Starter Template
 
-📥 **[Download the Session 5 starter template]** https://surl.li/qfyvja
+📥 **[Download the Session 5 starter template]** https://surl.li/ubluxp
 
 Unzip it and open it in your editor. It already includes:
 
