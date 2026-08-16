@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌊 Sindbad: The Backend of Atlantis
+# 🌊 [Sindbad: The Backend of Atlantis](https://open-source-community.github.io/backend-summer-2026-page/)
 
 ### Backend Summer Training 2026
 
